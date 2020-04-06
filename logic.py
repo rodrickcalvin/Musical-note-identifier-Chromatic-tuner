@@ -9,8 +9,9 @@ import frequencies
 
 NOTE_MIN = 60       # C4
 NOTE_MAX = 69       # A4
-FSAMP = 22050       # Sampling frequency in Hz
-FRAME_SIZE = 2048   # How many samples per frame?
+FSAMP = 44100       # Sampling frequency in Hz
+FRAME_SIZE = 1024   # How many samples per frame?
+RECORDING_TIME = 3  # time to record audio
 FRAMES_PER_FFT = 16 # FFT takes average across how many frames?
 
 ######################################################################
@@ -60,14 +61,13 @@ window = 0.5 * (1 - np.cos(np.linspace(0, 2*np.pi, SAMPLES_PER_FFT, False)))
 
 # Print initial text
 print('sampling at', FSAMP, 'Hz with max resolution of', FREQ_STEP, 'Hz')
-print
 
 # As long as we are getting data:
 while stream.is_active():
 
     # Shift the buffer down and new data in
     buf[:-FRAME_SIZE] = buf[FRAME_SIZE:]
-    buf[-FRAME_SIZE:] = np.fromstring(stream.read(FRAME_SIZE), np.int16)
+    buf[-FRAME_SIZE:] = np.frombuffer(stream.read(FRAME_SIZE), np.int16)
 
     # Run the FFT on the windowed buffer
     fft = np.fft.rfft(buf * window)
