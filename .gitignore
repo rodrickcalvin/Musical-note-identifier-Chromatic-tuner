@@ -7,3 +7,6 @@ tunenv/
 
 file.wav
 __pycache__/
+
+# Designers
+kivy-designer/
