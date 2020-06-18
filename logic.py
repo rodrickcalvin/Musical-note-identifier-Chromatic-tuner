@@ -9,7 +9,7 @@ instrument = "Bass guitar"
 # =================================================================================================
 # The Note values are midi note Number
 # Advice to keep Frame_Size and Frames_per_FFT to be powers of two.
-class Tuner():
+class logic():
     def __init__(self, instrument):
         # BASS GUITAR
         if instrument == "Bass guitar":
@@ -38,7 +38,7 @@ class Tuner():
 
 
 # create an instance
-t = Tuner(instrument)
+t = logic(instrument)
 
 ######################################################################
 # Derived quantities from constants above. Note that as
