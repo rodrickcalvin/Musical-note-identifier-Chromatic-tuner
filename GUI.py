@@ -1,44 +1,121 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'tuner.ui'
+# Form implementation generated from reading ui file '/home/thanos/Qt/Guitar Tuna/guitarTunaDialog.ui'
 #
-# Created by: PyQt5 UI code generator 5.13.0
+# Created by: PyQt5 UI code generator 5.12.1
 #
 # WARNING! All changes made in this file will be lost!
-
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Window(object):
-    def setupUi(self, Window):
-        Window.setObjectName("Window")
-        Window.resize(596, 450)
-        self.sensor = QtWidgets.QSlider(Window)
-        self.sensor.setGeometry(QtCore.QRect(20, 260, 551, 41))
-        self.sensor.setLocale(QtCore.QLocale(QtCore.QLocale.English, QtCore.QLocale.Uganda))
-        self.sensor.setMaximum(1000)
-        self.sensor.setPageStep(1)
-        self.sensor.setOrientation(QtCore.Qt.Horizontal)
-        self.sensor.setTickInterval(0)
-        self.sensor.setObjectName("sensor")
-        self.graphicsView = QtWidgets.QGraphicsView(Window)
-        self.graphicsView.setGeometry(QtCore.QRect(240, 90, 111, 101))
-        self.graphicsView.setObjectName("graphicsView")
+class Ui_Dialog(object):
+    def setupUi(self, Dialog):
+        Dialog.setObjectName("Dialog")
+        Dialog.resize(422, 271)
+        self.verticalLayout = QtWidgets.QVBoxLayout(Dialog)
+        self.verticalLayout.setObjectName("verticalLayout")
+        spacerItem = QtWidgets.QSpacerItem(20, 13, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout.addItem(spacerItem)
+        self.horizontalLayout_15 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_15.setObjectName("horizontalLayout_15")
+        self.curentKeyLabel_3 = QtWidgets.QLabel(Dialog)
+        font = QtGui.QFont()
+        font.setPointSize(48)
+        self.curentKeyLabel_3.setFont(font)
+        self.curentKeyLabel_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.curentKeyLabel_3.setObjectName("curentKeyLabel_3")
+        self.horizontalLayout_15.addWidget(self.curentKeyLabel_3)
+        self.verticalLayout.addLayout(self.horizontalLayout_15)
+        self.horizontalLayout_16 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_16.setObjectName("horizontalLayout_16")
+        self.frequencyLabel_3 = QtWidgets.QLabel(Dialog)
+        self.frequencyLabel_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.frequencyLabel_3.setObjectName("frequencyLabel_3")
+        self.horizontalLayout_16.addWidget(self.frequencyLabel_3)
+        self.verticalLayout.addLayout(self.horizontalLayout_16)
+        self.horizontalLayout_17 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_17.setObjectName("horizontalLayout_17")
+        spacerItem1 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_17.addItem(spacerItem1)
+        self.levelLeft_Progress_3 = QtWidgets.QProgressBar(Dialog)
+        self.levelLeft_Progress_3.setProperty("value", 50)
+        self.levelLeft_Progress_3.setTextVisible(False)
+        self.levelLeft_Progress_3.setInvertedAppearance(True)
+        self.levelLeft_Progress_3.setObjectName("levelLeft_Progress_3")
+        self.horizontalLayout_17.addWidget(self.levelLeft_Progress_3)
+        self.nstructionLabel_3 = QtWidgets.QLabel(Dialog)
+        self.nstructionLabel_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.nstructionLabel_3.setObjectName("nstructionLabel_3")
+        self.horizontalLayout_17.addWidget(self.nstructionLabel_3)
+        self.levelRight_Progress_3 = QtWidgets.QProgressBar(Dialog)
+        self.levelRight_Progress_3.setProperty("value", 24)
+        self.levelRight_Progress_3.setTextVisible(False)
+        self.levelRight_Progress_3.setInvertedAppearance(False)
+        self.levelRight_Progress_3.setObjectName("levelRight_Progress_3")
+        self.horizontalLayout_17.addWidget(self.levelRight_Progress_3)
+        spacerItem2 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_17.addItem(spacerItem2)
+        self.verticalLayout.addLayout(self.horizontalLayout_17)
+        self.horizontalLayout_18 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_18.setObjectName("horizontalLayout_18")
+        spacerItem3 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_18.addItem(spacerItem3)
+        self.instrumentChooserComboxBox_3 = QtWidgets.QComboBox(Dialog)
+        self.instrumentChooserComboxBox_3.setObjectName("instrumentChooserComboxBox_3")
+        self.instrumentChooserComboxBox_3.addItem("")
+        self.instrumentChooserComboxBox_3.addItem("")
+        self.instrumentChooserComboxBox_3.addItem("")
+        self.horizontalLayout_18.addWidget(self.instrumentChooserComboxBox_3)
+        spacerItem4 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_18.addItem(spacerItem4)
+        self.verticalLayout.addLayout(self.horizontalLayout_18)
+        self.horizontalLayout_19 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_19.setObjectName("horizontalLayout_19")
+        spacerItem5 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_19.addItem(spacerItem5)
+        self.startBtn_3 = QtWidgets.QPushButton(Dialog)
+        self.startBtn_3.setObjectName("startBtn_3")
+        self.horizontalLayout_19.addWidget(self.startBtn_3)
+        spacerItem6 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_19.addItem(spacerItem6)
+        self.verticalLayout.addLayout(self.horizontalLayout_19)
+        self.horizontalLayout_20 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_20.setObjectName("horizontalLayout_20")
+        spacerItem7 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_20.addItem(spacerItem7)
+        self.stopBtn_3 = QtWidgets.QPushButton(Dialog)
+        self.stopBtn_3.setObjectName("stopBtn_3")
+        self.horizontalLayout_20.addWidget(self.stopBtn_3)
+        spacerItem8 = QtWidgets.QSpacerItem(30, 10, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_20.addItem(spacerItem8)
+        self.verticalLayout.addLayout(self.horizontalLayout_20)
+        spacerItem9 = QtWidgets.QSpacerItem(20, 13, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout.addItem(spacerItem9)
 
-        self.retranslateUi(Window)
-        QtCore.QMetaObject.connectSlotsByName(Window)
+        self.retranslateUi(Dialog)
+        QtCore.QMetaObject.connectSlotsByName(Dialog)
 
-    def retranslateUi(self, Window):
+    def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Window.setWindowTitle(_translate("Window", "Frame"))
+        Dialog.setWindowTitle(_translate("Dialog", "xDialog"))
+        self.curentKeyLabel_3.setText(_translate("Dialog", "C#m"))
+        self.frequencyLabel_3.setText(_translate("Dialog", "(0 KHz)"))
+        self.nstructionLabel_3.setText(_translate("Dialog", "|"))
+        self.instrumentChooserComboxBox_3.setItemText(0, _translate("Dialog", "Acoustic/Electric Guitar"))
+        self.instrumentChooserComboxBox_3.setItemText(1, _translate("Dialog", "Bass Guitar"))
+        self.instrumentChooserComboxBox_3.setItemText(2, _translate("Dialog", "Ukulele"))
+        self.startBtn_3.setText(_translate("Dialog", "Start"))
+        self.stopBtn_3.setText(_translate("Dialog", "Stop"))
+
+
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Window = QtWidgets.QFrame()
-    ui = Ui_Window()
-    ui.setupUi(Window)
-    Window.show()
+    Dialog = QtWidgets.QDialog()
+    ui = Ui_Dialog()
+    ui.setupUi(Dialog)
+    Dialog.show()
     sys.exit(app.exec_())
