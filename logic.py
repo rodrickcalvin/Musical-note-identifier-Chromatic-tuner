@@ -1,16 +1,43 @@
-import numpy as np
 import pyaudio
+import numpy as np
 import frequencies
+from GUI import *
+from PyQt5 import QtCore, QtGui, QtWidgets
+import sys
 
-######################################################################
-# Feel free to play with these numbers. Might want to change NOTE_MIN
-# and NOTE_MAX especially for guitar/bass. Probably want to keep
-# FRAME_SIZE and FRAMES_PER_FFT to be powers of two.
+instrument = "Bass guitar"
+# =================================================================================================
+# The Note values are midi note Number
+# Advice to keep FRAME_SIZE and FRAMES_PER_FFT to be powers of two.
+class Tuner():
+    def __init__(self, instrument):
+        # BASS GUITAR
+        if instrument == "Bass guitar":
+            self.NOTE_MIN = 23       # B0
+            self.NOTE_MAX = 48       # 
+        
+        # ACOUSTIC/ELECTRIC GUITAR
+        if instrument == "Acoustic/Electric guitar":
+            self.NOTE_MIN = 40       # E2
+            self.NOTE_MAX = 64       # E4
+        
+        # UKELELE
+        if instrument == "ukelele":
+            self.NOTE_MIN = 60       # C4
+            self.NOTE_MAX = 69       # A4
 
-NOTE_MIN = 60       # C4
-NOTE_MAX = 69       # A4
-FSAMP = 44100       # Sampling frequency in Hz
-FRAME_SIZE = 1024   # How many samples per frame?
+        # super().__init__()
+        # self.ui = Ui_Dialog()
+        # self.ui.setupUi(self)
+
+
+
+# create an instance
+t = Tuner(instrument)
+
+
+FSAMP = 22050      # Sampling frequency in Hz
+FRAME_SIZE = 2048   # How many samples per frame?
 RECORDING_TIME = 3  # time to record audio
 FRAMES_PER_FFT = 16 # FFT takes average across how many frames?
 
@@ -30,7 +57,7 @@ NOTE_NAMES = 'C C#/Db D D#/Eb E F F# G G#/Ab A A#/Bb B'.split()
 
 ######################################################################
 
-def freq_to_midi(f): return NOTE_MAX + 12*np.log2(f/frequencies.A_4)
+def freq_to_midi(f): return 69 + 12*np.log2(f/440.0)
 def midi_to_freq(n): return 440 * 2.0**((n-69)/12.0)
 def note_name(n): return NOTE_NAMES[n % 12] + str(n/12 - 1)
 
@@ -40,19 +67,20 @@ def note_name(n): return NOTE_NAMES[n % 12] + str(n/12 - 1)
 # Get min/max index within FFT of notes we care about.
 # See docs for numpy.rfftfreq()
 def note_to_fftbin(n): return midi_to_freq(n)/FREQ_STEP
-imin = max(0, int(np.floor(note_to_fftbin(NOTE_MIN-1))))
-imax = min(SAMPLES_PER_FFT, int(np.ceil(note_to_fftbin(NOTE_MAX+1))))
+imin = max(0, int(np.floor(note_to_fftbin(t.NOTE_MIN-1))))
+imax = min(SAMPLES_PER_FFT, int(np.ceil(note_to_fftbin(t.NOTE_MAX+1))))
 
 # Allocate space to run an FFT. 
 buf = np.zeros(SAMPLES_PER_FFT, dtype=np.float32)
 num_frames = 0
 
 # Initialize audio
-stream = pyaudio.PyAudio().open(format=pyaudio.paInt16,
-                                channels=1,
-                                rate=FSAMP,
-                                input=True,
-                                frames_per_buffer=FRAME_SIZE)
+p = pyaudio.PyAudio()
+stream = p.open(format=pyaudio.paInt16,
+                channels=1,
+                rate=FSAMP,
+                input=True,
+                frames_per_buffer=FRAME_SIZE)
 
 stream.start_stream()
 
@@ -67,7 +95,7 @@ while stream.is_active():
 
     # Shift the buffer down and new data in
     buf[:-FRAME_SIZE] = buf[FRAME_SIZE:]
-    buf[-FRAME_SIZE:] = np.frombuffer(stream.read(FRAME_SIZE), np.int16)
+    buf[-FRAME_SIZE:] = np.fromstring(stream.read(FRAME_SIZE), np.int16)
 
     # Run the FFT on the windowed buffer
     fft = np.fft.rfft(buf * window)
