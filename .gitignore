@@ -6,6 +6,8 @@
 tunenv/
 
 file.wav
+
+# system cache file
 __pycache__/
 
 # Designers
