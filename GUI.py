@@ -39,7 +39,7 @@ class Ui_Dialog(object):
         spacerItem1 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_17.addItem(spacerItem1)
         self.levelLeft_Progress_3 = QtWidgets.QProgressBar(Dialog)
-        self.levelLeft_Progress_3.setProperty("value", 50)
+        self.levelLeft_Progress_3.setProperty("value", 0)
         self.levelLeft_Progress_3.setTextVisible(False)
         self.levelLeft_Progress_3.setInvertedAppearance(True)
         self.levelLeft_Progress_3.setObjectName("levelLeft_Progress_3")
@@ -49,7 +49,7 @@ class Ui_Dialog(object):
         self.nstructionLabel_3.setObjectName("nstructionLabel_3")
         self.horizontalLayout_17.addWidget(self.nstructionLabel_3)
         self.levelRight_Progress_3 = QtWidgets.QProgressBar(Dialog)
-        self.levelRight_Progress_3.setProperty("value", 24)
+        self.levelRight_Progress_3.setProperty("value", 0)
         self.levelRight_Progress_3.setTextVisible(False)
         self.levelRight_Progress_3.setInvertedAppearance(False)
         self.levelRight_Progress_3.setObjectName("levelRight_Progress_3")
@@ -98,24 +98,24 @@ class Ui_Dialog(object):
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "xDialog"))
-        self.curentKeyLabel_3.setText(_translate("Dialog", "C#m"))
+        Dialog.setWindowTitle(_translate("Dialog", "Chromatic Tuner"))
+        self.curentKeyLabel_3.setText(_translate("Dialog", "__"))
         self.frequencyLabel_3.setText(_translate("Dialog", "(0 KHz)"))
         self.nstructionLabel_3.setText(_translate("Dialog", "|"))
         self.instrumentChooserComboxBox_3.setItemText(0, _translate("Dialog", "Acoustic/Electric Guitar"))
         self.instrumentChooserComboxBox_3.setItemText(1, _translate("Dialog", "Bass Guitar"))
         self.instrumentChooserComboxBox_3.setItemText(2, _translate("Dialog", "Ukulele"))
-        self.startBtn_3.setText(_translate("Dialog", "Start"))
+        self.startBtn_3.setText(_translate("Dialog", "Start Tuning"))
         self.stopBtn_3.setText(_translate("Dialog", "Stop"))
 
 
 
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Dialog = QtWidgets.QDialog()
-    ui = Ui_Dialog()
-    ui.setupUi(Dialog)
-    Dialog.show()
-    sys.exit(app.exec_())
+# if __name__ == "__main__":
+#     import sys
+#     app = QtWidgets.QApplication(sys.argv)
+#     Dialog = QtWidgets.QDialog()
+#     ui = Ui_Dialog()
+#     ui.setupUi(Dialog)
+#     Dialog.show()
+#     sys.exit(app.exec_())
