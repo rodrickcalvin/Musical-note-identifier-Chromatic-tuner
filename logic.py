@@ -75,10 +75,4 @@ class TunerLogic:
 
 # create an instance
 # t =  TunerLogic()
-#
-#
-#
-#
-#
 
-#
