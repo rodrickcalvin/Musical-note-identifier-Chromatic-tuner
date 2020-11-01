@@ -6,6 +6,13 @@ import numpy as np
 # The Note values are midi note Number
 # Advice to keep Frame_Size and Frames_per_FFT to be powers of two.
 class TunerLogic:
+
+    Sampling_Freq = 22050  # Sampling frequency in Hz
+    Frame_Size = 2048  # How many samples per frame?
+    RECORDING_TIME = 3             # time to record audio
+    Frames_per_FFT = 16  # FFT takes average across how many frames?
+    Standard_Freq = 440.0
+
     def __init__(self, instrument):
         # BASS GUITAR
         if instrument == "Bass Guitar":
@@ -22,11 +29,6 @@ class TunerLogic:
             self.Note_min = 60              # C4
             self.Note_max = 69              # A4
 
-        self.Sampling_Freq = 22050          # Sampling frequency in Hz
-        self.Frame_Size = 2048              # How many samples per frame?
-        # self.RECORDING_TIME = 3             # time to record audio
-        self.Frames_per_FFT = 16            # FFT takes average across how many frames?
-        self.Standard_Freq = 440.0
 
         ######################################################################
         # Derived quantities from constants above. Note that as
