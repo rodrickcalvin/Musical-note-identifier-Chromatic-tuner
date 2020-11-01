@@ -12,3 +12,6 @@ __pycache__/
 
 # Designers
 kivy-designer/
+
+# tutorials
+classes.py
