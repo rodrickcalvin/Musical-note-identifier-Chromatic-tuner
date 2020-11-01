@@ -1,5 +1,5 @@
 # Note Names, Frequencies & Note Wave Lengths
-> The following functions in ```tuner.py``` :
+> The following functions in ```logic.py``` :
 > * ```freq_to_number(f)```
 > * ```number_to_freq(n)```
 > * ```note_name(n)```
