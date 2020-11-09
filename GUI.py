@@ -87,6 +87,10 @@ class Ui_Dialog(object):
         self.stopBtn_3 = QtWidgets.QPushButton(Dialog)
         self.stopBtn_3.setObjectName("stopBtn_3")
         self.horizontalLayout_20.addWidget(self.stopBtn_3)
+        self.exitBtn_3 = QtWidgets.QPushButton(Dialog)
+        self.exitBtn_3.setObjectName("exitBtn_3")
+        self.horizontalLayout_20.addWidget(self.exitBtn_3)
+
         spacerItem8 = QtWidgets.QSpacerItem(30, 10, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_20.addItem(spacerItem8)
         self.verticalLayout.addLayout(self.horizontalLayout_20)
@@ -107,15 +111,5 @@ class Ui_Dialog(object):
         self.instrumentChooserComboxBox_3.setItemText(2, _translate("Dialog", "Ukulele"))
         self.startBtn_3.setText(_translate("Dialog", "Start Tuning"))
         self.stopBtn_3.setText(_translate("Dialog", "Stop"))
+        self.exitBtn_3.setText(_translate("Dialog", "Exit"))
 
-
-
-
-# if __name__ == "__main__":
-#     import sys
-#     app = QtWidgets.QApplication(sys.argv)
-#     Dialog = QtWidgets.QDialog()
-#     ui = Ui_Dialog()
-#     ui.setupUi(Dialog)
-#     Dialog.show()
-#     sys.exit(app.exec_())
