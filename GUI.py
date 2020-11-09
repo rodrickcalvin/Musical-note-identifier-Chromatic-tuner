@@ -113,14 +113,3 @@ class Ui_Dialog(object):
         self.stopBtn_3.setText(_translate("Dialog", "Stop"))
         self.exitBtn_3.setText(_translate("Dialog", "Exit"))
 
-
-
-
-# if __name__ == "__main__":
-#     import sys
-#     app = QtWidgets.QApplication(sys.argv)
-#     Dialog = QtWidgets.QDialog()
-#     ui = Ui_Dialog()
-#     ui.setupUi(Dialog)
-#     Dialog.show()
-#     sys.exit(app.exec_())
