@@ -1,4 +1,15 @@
-# Note Names, Frequencies & Note Wave Lengths
+# Theory behind the Apllication
+In music, we talk about many things for example ```the key```, ```the chords```, ```the notes``` and ```the octaves```.
+
+To relate music with physics and mathematics language, we take a deeper look into the above terms.
+## A musical key
+> It is a scale around which music revolves. Hence the fundamental notes making the song's melody, chords and bassline are derived from that group of notes.
+
+## A musical chord
+> It is a combination of two or more harmonics notes played at the same time.
+
+## 
+
 > The following functions in ```logic.py``` :
 > * ```freq_to_number(f)```
 > * ```number_to_freq(n)```
