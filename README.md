@@ -24,6 +24,13 @@ Go to [Theory.md](https://github.com/rodrickcalvin/Musical-note-identifier-Chrom
 
   :):):):):):):):):):):):):):):):):):):):)Enjoy yourself:):):):):):):):):):):):):):):)
 
+  ## Contributions:
+  You are welcome to contribute to this project. We developed it during a process to find a solution to an assignment in the course: ```Audio and Speech Signal Processing``` under the Computer Engineering undergraduate programme at university.
+
+  We were asked to develop a simple audio processing application using what we had learnt. And so we came up with the idea as a small project.
+
+  > A big shoutout [Matt Zucker](https://github.com/mzucker) from Philadelphia for the repository that guided us through the creation of this application.....
+
 
 
 
