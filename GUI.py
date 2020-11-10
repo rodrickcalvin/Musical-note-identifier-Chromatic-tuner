@@ -114,4 +114,3 @@ class Ui_Dialog(object):
         self.startBtn_3.setText(_translate("Dialog", "Start Tuning"))
         self.stopBtn_3.setText(_translate("Dialog", "Stop"))
         self.exitBtn_3.setText(_translate("Dialog", "Exit"))
-
