@@ -1,4 +1,24 @@
-# Note Names, Frequencies & Note Wave Lengths
+# Theory behind the Apllication
+In music, we talk about many things for example ```the key```, ```the chords```, ```the notes``` and ```the octaves```.
+
+To relate music with physics and mathematics language, we take a deeper look into the above terms.
+### A musical key
+> It is a scale around which music revolves. Hence the fundamental notes making the song's melody, chords and bassline are derived from that group of notes.
+
+### A musical chord
+> It is a combination of two or more harmonics notes played at the same time.
+
+### A musical note
+> It is a melody interpreted by a brain for a specific frequency.
+
+### An octave
+> This is an interval between one musical pitch to another which is double it frequency.
+
+When sound is input into the computer through a microphone, it is transformed from ```spatial domain``` to ```frequency domain``` to easily discern which is noise and the required note from the input.
+
+To break it down in details:
+1. We use ```STFT (Short Time Fourier Transform)``` that takes in an input and splits it into segments and each segment is converted to frequency domain.
+
 > The following functions in ```logic.py``` :
 > * ```freq_to_number(f)```
 > * ```number_to_freq(n)```
