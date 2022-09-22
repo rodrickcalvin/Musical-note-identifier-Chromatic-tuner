@@ -47,6 +47,17 @@ Go to [Theory.md](https://github.com/rodrickcalvin/Musical-note-identifier-Chrom
 
   > A big shoutout [Matt Zucker](https://github.com/mzucker) from Philadelphia for the repository that guided us through the creation of this application.....
 
+  ## MINI-PROJECT YOU CAN PLAY WITH:
+  As I was building the tuner or note identifier, I also build a recorder that takes in the length of the recording(time in seconds) & the name of the file as imputs. You can also use this to your advantage.
+  ```bash
+  $ cd recorder
+  $ python recorder.py
+  ```
+
+  ## Contact:
+  You can get the contact details of the developers from the site:
+  - [Rodrick Calvin Wamala](https://rodricksresume.gatsbyjs.io/)
+
 
 
 
