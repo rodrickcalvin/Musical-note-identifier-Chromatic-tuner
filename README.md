@@ -3,6 +3,7 @@ Go to [Theory.md](https://github.com/rodrickcalvin/Musical-note-identifier-Chrom
 
 ## After:
 - Clone the project to your local computer.
+- Make sure have a stable python 
 - Install the following packages
   > ### For GUI:
   > Choose your favorite GUI library to build. The options are:
@@ -13,13 +14,26 @@ Go to [Theory.md](https://github.com/rodrickcalvin/Musical-note-identifier-Chrom
 
    !!! Disclaimer: Choose wisely considering ease of use and quality output...
   > ### For the logic and backend:
-  > Take note to always use a python version compatible with the libraries. We use python version 3.6 because pyAudio wouldn't install on later versions of python 3.7+.
+  > Take note to always use a python version compatible with the libraries. At inintial development we used python version 3.6 because pyAudio wouldn't install on later versions of python 3.7+. I am currently running python 3.8.10 from WSL2 and it works fine.
   > - Create a virtual environment using virtualenv or virtualenvwrapper
   > - If using windows make sure your visual c++ and build tools are installed. Hence you may need to have visual studio installed on your computer.
+  > - If you are using WSL/WSL2 OR linux, you may need to install the following packages:
+  >   - libasound2-dev
+  >   - portaudio19-dev
+  >   - libportaudio2
+  >   - libportaudiocpp0
+  >   - ffmpeg
+  >   - libav-tools
+  >   - libavcodec-extra
+  > Run the following command to install the required packages: 
+  > ```bash
+  > $ sudo apt-get install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0
+  > $ sudo apt-get install ffmpeg
+  > ```
   > - activate your environment:
   > ```"myenv\Scripts\activate"``` for virtualenv and ```"workon myenv"``` for virtualenvwrapper.
   > - install the requirements needed for the project:
-  > ```"pip install --user -r requirements.txt"```
+  > ```"pip install -r requirements.txt"```
   > - Run the ```multithreading.py``` file.
 
   :):):):):):):):):):):):):):):):):):):):)Enjoy yourself:):):):):):):):):):):):):):):)
