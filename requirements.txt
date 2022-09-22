@@ -1,0 +1,6 @@
+numpy==1.23.3
+PyAudio==0.2.12
+PyQt5==5.15.7
+PyQt5-Qt5==5.15.2
+PyQt5-sip==12.11.0
+Quamash==0.6.1
