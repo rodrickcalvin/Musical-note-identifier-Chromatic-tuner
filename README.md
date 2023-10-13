@@ -12,7 +12,8 @@ Go to [Theory.md](https://github.com/rodrickcalvin/Musical-note-identifier-Chrom
   > - PyQT
   > - tKinter
 
-   !!! Disclaimer: Choose wisely considering ease of use and quality output...
+
+   **!!! Disclaimer-1**: Choose wisely considering ease of use and quality output...
   > ### For the logic and backend:
   > Take note to always use a python version compatible with the libraries. At inintial development we used python version 3.6 because pyAudio wouldn't install on later versions of python 3.7+. I am currently running python 3.8.10 from WSL2 and it works fine.
   > - Create a virtual environment using virtualenv or virtualenvwrapper
@@ -36,7 +37,9 @@ Go to [Theory.md](https://github.com/rodrickcalvin/Musical-note-identifier-Chrom
   > ```"pip install -r requirements.txt"```
   > - Run the ```multithreading.py``` file.
 
-  :):):):):):):):):):):):):):):):):):):):)Enjoy yourself:):):):):):):):):):):):):):):)
+  **!!! Disclaimer-2**: WSL2 might have issues with connecting to audio devices from a windows machine. Solution would be using a USB device or IP
+
+  😊😊😊😊😊😊Enjoy yourself😊😊😊😊😊😊
 
   ## Contributions:
   You are welcome to contribute to this project. Just star the project and cite it in your work

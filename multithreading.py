@@ -1,5 +1,5 @@
 import traceback, sys, time, os
-import pyaudio
+
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
